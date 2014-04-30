@@ -5,8 +5,14 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
+    if user_signed_in?
+      @blogs = Blog.all.where(:user => current_user) #this will be current_user.casino or w/e
+    else
+      @blogs = Blog.all
+   end
+    @blog = Blog.new
   end
+    
 
   # GET /blogs/1
   # GET /blogs/1.json

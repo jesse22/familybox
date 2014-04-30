@@ -10,7 +10,7 @@
   <% @blogs.each do |blog| %>
     <tr>
       <td><%= link_to blog.post %></td>
-      <td><%= link_to blog.user %></td>
+      <td><%= link_to blog.user.username %></td>
     </tr>
   <% end %>
   </tbody>
