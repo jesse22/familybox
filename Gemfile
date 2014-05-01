@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.0.0'
 
 #For uploading images
 gem 'carrierwave'
+#For processing images
+gem 'rmagick'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

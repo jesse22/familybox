@@ -13,6 +13,7 @@
       <td><%= link_to blog.post %></td>
       <td><%= link_to blog.user.username %></td>
       <td><%= image_tag blog.image_url.to_s %></td>
+      <td><%= image_tag blog.image_url(:thumb).to_s %></td>
     </tr>
   <% end %>
   </tbody>
