@@ -4,7 +4,7 @@
   <thead>
     <tr>
       <th>Post</th>
-      <th colspan="3"></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -22,4 +22,10 @@
 
 <br>
 
-<%= link_to 'New Blog', new_blog_path %>
+
+<% content_for :adding do %>
+<%= render 'form' if user_signed_in? %>
+
+
+<% end %>
+
