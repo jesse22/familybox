@@ -8,10 +8,13 @@
 
   <tbody>
   <% @blogs.each do |blog| %>
+    
     <tr>
       <td><%= link_to blog.post %></td>
       <td><%= link_to blog.user.username %></td>
+      <td><%= image_tag blog.image_url.to_s %></td>
     </tr>
   <% end %>
   </tbody>
 </table>
+
