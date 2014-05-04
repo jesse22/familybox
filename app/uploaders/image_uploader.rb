@@ -1,10 +1,13 @@
 # encoding: utf-8
+require 'rubygems'
+require 'RMagick'
 
 class ImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
     include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
+  
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -30,12 +33,26 @@ class ImageUploader < CarrierWave::Uploader::Base
   # def scale(width, height)
   #   # do something
   # end
-
+ 
+    # Add a border around images
+    version :border1 do
+      process :border
+    end
+    
+    
   # Create different versions of your uploaded files:
     version :thumb do
       process :resize_to_fit => [200, 200]
     end
+    
+    def border
+      manipulate! do |img|
+        img.border!(4,4,"black")
+      end
+    end
+      
 
+    
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   # def extension_white_list

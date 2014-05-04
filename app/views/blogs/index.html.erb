@@ -12,6 +12,7 @@
     <% @blogs.each do |blog| %>
       <tr>
         <td><%= blog.post %></td>
+        <td><%= image_tag blog.image_url(:border1).to_s %></td>
         <td><%= link_to 'Show', blog %></td>
         <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
         <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
