@@ -8,12 +8,12 @@
     <% @blogs.each do |blog| %>
       <tr>
         
-        <div class="span6">  <td><%= blog.post %></td> </div>
-        <div class="span3"><td><%= image_tag blog.image_url(:thumb).to_s %></td></div>
-        <div class="span3"><td><%= link_to 'Show', blog %></td>
+          <td><%= blog.post %></td>
+        <td><%= image_tag blog.image_url(:thumb).to_s %></td><br>
+        <td><%= link_to 'Show', blog %></td>
         <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </div>
+        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td><br>
+        <br>
           </tr>
     <% end %>
   </tbody>

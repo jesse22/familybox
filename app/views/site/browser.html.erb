@@ -1,0 +1,13 @@
+<br>
+<%= Browserinfo::GetInfo.process(request.env["HTTP_USER_AGENT"]) %>
+<br>
+<%= request.env["HTTP_USER_AGENT"] %>
+<br>
+blog.user.username
+<br>
+<% for item in request.env %>
+
+<br><%= item[0] %><br>
+<%= item[1] %>
+<br>
+<% end %>

@@ -39,10 +39,19 @@
        <p class="alert"><%= alert %></p>
 <div class="container">
   <div class="row">
-    <div class="span6"><%= yield %></div>
+    <div class="span5">
+      <div class="row-fluid1">
+      <div class="padded">
+      <%= yield %>
+      </div>
+      </div>
+    </div>
+    <div class="span1"></div>
     <div class="span6">
+      <div class="padded">
       <h2>Right Column</h2>
-      <p><%= yield :adding %></p>        
+      <p><%= yield :adding %></p>   
+      </div>
     </div>
   </div>
 </div>

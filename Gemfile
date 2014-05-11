@@ -19,6 +19,9 @@ gem 'carrierwave'
 #For processing images
 gem 'rmagick'
 
+# Testing my very first gem
+gem 'browserinfo'  #, :git => 'git://github.com/jesse22/browserinfo.git'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
