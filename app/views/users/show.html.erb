@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Post:</strong>
+ <%= @user.username %>
+</p>
+
+<% @user.blogs.each do |blog| %>
+        <tr>
+        
+          <td><%= blog.post %></td>
+        <td><%= image_tag blog.image_url(:thumb).to_s %></td><br>
+       
+        <br>
+          </tr>
+<% end %>
+hello there

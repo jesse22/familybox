@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :blogs
+  match 'users/:id' => 'users#show', via: :get
   
   root :to => "site#index"
 

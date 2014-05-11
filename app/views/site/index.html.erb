@@ -13,7 +13,7 @@
       <div class="container">
   <div class="row">
       <div class="span7"><td><%= blog.post %></td></div>
-      <div class="span1"><td><%= blog.user.username %></td></div>
+    <div class="span1"><td><%= link_to blog.user.username, :controller => 'users', :action => 'show', :id => blog.user %></td></div>
       <div class="span4"><td><%= image_tag blog.image_url(:border1).to_s %></td></div>
         </div><br>
       </div>
@@ -23,3 +23,4 @@
 
       </div>
     </div>
+
