@@ -12,8 +12,8 @@
     <tr>
       <div class="container">
   <div class="row">
-    <div class="span7"><div class="box text-center"><td><%= blog.post %></td></div></div>
-    <div class="span1"><td><%= link_to blog.user.username, :controller => 'users', :action => 'show', :id => blog.user %></td></div>
+    <div class="span6"><div class="box text-center"><td><%= blog.post %></td></div></div>
+    <div class="span2"><div class="box text-center"><td><%= link_to blog.user.username, :controller => 'users', :action => 'show', :id => blog.user %></td></div></div>
       <div class="span4"><td><%= image_tag blog.image_url(:border1).to_s %></td></div>
         </div><br>
       </div>
